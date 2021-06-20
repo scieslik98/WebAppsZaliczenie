@@ -1,0 +1,17 @@
+extends index
+block content
+    h2 Edycja Ksiazki
+    form(method='POST' action='/action')
+        each variable in listaksiazek
+            table
+                tr
+                    td
+                        input#name(type='text' name='tytul' value=variable.tytul style="display:none")
+                tr
+                    td
+                        label Rasa
+                    td
+                        input#name(type='text' name='autor' value=variable.autor)
+
+    if message!=''
+        p #{message}

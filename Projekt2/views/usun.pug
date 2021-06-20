@@ -1,0 +1,10 @@
+extends index
+block content
+    h1 Usuń ksiazke
+    form(method='POST' action='/delete')
+        select#UsunKsiazke(name="UsunKsiazke")
+            each variable in listaksiazek
+                option(value=variable.tytul) #{variable.tytul + ", tytul: " + variable.tytul + ", autor: " + variable.autor}
+        button(type='submit') Usuń
+    if message!=''
+        p #{message}

@@ -1,0 +1,14 @@
+extends index 
+block content 
+    h2 Lista ksiazek
+    table
+        thead
+            tr
+                th tytul
+                th autor
+        tbody
+            each ksiazka, index in listaksiazek
+                tr
+                    td=index+1
+                    td=ksiazka.tytul
+                    td=animal.autor

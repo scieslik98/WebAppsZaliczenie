@@ -1,0 +1,18 @@
+extends index
+block content
+    h2 Dodaj ksiazke do ksiegozbioru
+    form(method='POST' action='/dodaj')
+        table
+            tr
+                td
+                    label Tytul
+                td
+                    input#name(type='text' name='tytul')
+            tr
+                td
+                    label Autor Szczególne
+                td
+                    input#name(type='text' name='autor')
+
+    if message!=''
+        p #{message}
